@@ -38,13 +38,35 @@ class create_account extends Account{
         System.out.println("Account Type : "+acc_type);
     }
  
-        void deposite(int acc_num,int money){                 
-                Acc_Balance=money;    
+        void deposite(int acc_num,int money){
+        	if(money>0)
+        	{
+                Acc_Balance+=money;
+        	}
         }
         
         int withdraw(int withd){
+        		if(withd<=Acc_Balance && withd>=0)
+        		{
                 Acc_Balance=Acc_Balance-withd;
+        		}
+        		else
+        		{
+        			return Acc_Balance;
+        		}
+
                 return Acc_Balance;
+        }
+        int checkbal(int an)
+        {
+        	if(an<=0 || an>9999)
+        	{
+        		return -1;
+        	}
+        	else
+        	{
+        		return Acc_Balance;
+        	}
         }
   
 } // end class 

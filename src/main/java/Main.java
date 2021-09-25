@@ -9,7 +9,7 @@ public class Main {
 int aNumber = 0; 
 aNumber = (int)((Math.random() * 9000)+1000); 
 
-        create_account user = new create_account("user",0,0,"savings");
+        create_account user = new create_account("user",0,5000,"savings");
     
             Scanner in = new Scanner(System.in);
             Scanner strng=new Scanner(System.in);
@@ -38,7 +38,7 @@ aNumber = (int)((Math.random() * 9000)+1000);
                         user.display_details();
                         break;
                       
-                case 2: // deposite
+                case 2: // deposit
                     System.out.print("Enter your account Number : ");
                     tmp=in.nextInt();
                  if(tmp==user.Acc_num){
